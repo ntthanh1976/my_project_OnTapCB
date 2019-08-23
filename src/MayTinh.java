@@ -232,14 +232,17 @@ public class MayTinh extends javax.swing.JFrame {
         // TODO add your handling code here:
         double a=Double.parseDouble(txtsohanga.getText());
         double b=Double.parseDouble(txtsohangb.getText());
+        double kq=0;
         if(rbCong.isSelected()){
-            txtrs.setText("Kết quả: "+(a+b));
+            kq= a+b;
         }else if(rbTru.isSelected()){
-            txtrs.setText("Kết quả: "+(a-b));
+           kq=a-b;
         }else if(rbnhan.isSelected()){
-            txtrs.setText("Kết quả: "+(a*b));
+            kq=a*b;
         }else
-            txtrs.setText("Kết quả: "+(a/b));
+          kq=a/b;
+        
+        txtrs.setText("Kết quả: " + kq);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
